@@ -1,40 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./Assets/css/styles.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">">
-    <title>Mon premiser site Bootstrap</title>
-</head>
-<body>
-
-    <h1 class="couleur-rouge">
-        Mon premier site Bootstrap
-    
-    </h1>
-    <button type="button" class="btn btn-primary"><i class="bi bi-check2"></i></i>coucou</button>
-    <button  class="btn btn-danger"><i class="bi bi-trash text-primary"></i>Supprimer</button>
-    <br>
-    <i id="happy-icon" class="bi bi-emoji-laughing"></i><br>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+        <title>Mon premiser site Bootstrap</title>
+    </head>
+    <body class="d-flex flex-column" data-bs-theme="dark">
+    <header>
+        <nav class="navbar navbar-expand-md bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://picsum.photos/200" alt="Bootstrap" width="30" height="24">
+                </a>
+                <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarWebsite" 
+                aria-controls="navbarWebsite" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                    <i class="bi bi-usb-drive"></i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarWebsite">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                            <!-- Button trigger modal -->
+                        <button type="button" 
+                            class="nav-link" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#exampleModal">
+                                Modal
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+        </nav>
+    </header>
+
+  
+
+        <main class="section container">
+            <section class="section1">
+                <h1>Mes articles</h1>
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="card">
+                            <img src="./Assets/img/Capture d'écran 2025-02-28 143943.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <hr>
+            <section class="section2">
+                <div class="container d-flex">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar">
+                                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                                    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                                    <span class="fs-4">Sidebar</span>
+                                </a>
+                                <hr>
+                                <ul class="nav nav-pills flex-column mb-auto">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link active" aria-current="page">
+                                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                                        Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link link-body-emphasis">
+                                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                                        Dashboard
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link link-body-emphasis">
+                                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                                        Orders
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link link-body-emphasis">
+                                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                                        Products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link link-body-emphasis">
+                                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                                        Customers
+                                        </a>
+                                    </li>
+                                    </ul>
+                                    <hr>
+                                    <div class="dropdown">
+                                    <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                                        <strong>mdo</strong>
+                                    </a>
+                                    <ul class="dropdown-menu text-small shadow">
+                                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                    </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="d-flex flex-wrap ">
+                                <div class=" mt-1 d-flex justify-content-center align-items-center"><p class="text-center ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                    Aut similique ullam explicabo dolorem. Ut, animi numquam laboriosam, 
+                                    dolor nisi necessitatibus, eius aliquid corrupti dolorum architecto ipsum 
+                                    officiis quaerat. Corporis labore, ducimus vero eaque molestias exercitationem, 
+                                    cum laudantium rem eligendi quia repellat placeat adipisci est ad delectus! Error 
+                                    commodi excepturi vitae blanditiis ullam eum nulla? Beatae eligendi itaque iusto rem 
+                                    nam ipsam, a voluptatum perferendis. Quod provident odio commodi cum, sapiente 
+                                    deleniti exercitationem, soluta odit, aut voluptas distinctio quidem qui 
+                                    itaque deserunt sequi molestias laudantium in ea! Laborum, nesciunt culpa? 
+                                    Sint ullam alias non tempore eos dolorem veniam inventore eveniet impedit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                                    <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                                    <div class="d-flex gap-2 w-100 justify-content-between">
+                                    <div>
+                                        <h6 class="mb-0">List group item heading</h6>
+                                        <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                                    </div>
+                                        <small class="opacity-50 text-nowrap">now</small>
+                                    </div>
+                                </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+    </section>  
+    </main>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top bg-body-tertiary">
+            <div class="col-md-4 col-sm-12 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+        </footer> 
+         <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modaltitle</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <span class="text-bg-success text-dark">Coucou les mais , j'ai pas d'inspi</span>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
